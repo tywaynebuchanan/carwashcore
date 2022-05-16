@@ -1,0 +1,27 @@
+/* Login Css */
+
+
+
+
+.custom-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* .fas{
+    color: #363636 !important;
+} */
+
+.card{
+    padding: 20px !important;
+}
+
+.custom-section{
+  height: 50vh;
+}
+
+.custom-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
