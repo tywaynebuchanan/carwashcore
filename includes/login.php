@@ -1,11 +1,19 @@
 <?php 
 
+
+function sanitizeInput($conn, $input){
+    $input = trim($input);
+    $input = stripslashes($input);
+    $input = htmlspecialchars($input);
+    $input = $conn->real_escape_string($input);
+    return $input;
+}
     if(isset($_POST['submit'])){
         require('lib/config.php');
       $username = $_POST['username'];
        $password = $_POST['password'];
-    //    sanitizeInput($conn,$username);
-    //      sanitizeInput($conn,$password);
+    sanitizeInput($conn,$username);
+    sanitizeInput($conn,$password);
          
     if(empty($username) && empty($password)){
         header("Location: index.php?message=empty");

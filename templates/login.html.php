@@ -14,9 +14,47 @@
         <p class="welcome-message">
             Provide you login information
         </p>
+     <?php 
+     if(isset($_GET['message'])){
+        if($_GET['message'] == 'empty'){
+            echo '
+           <div class = "error">
+           You need to enter your username and password!
+           </div>
+            ';
+        }
+        if($_GET['message'] == 'notloggedin'){
+            echo '
+           <div class = "error">
+           Opps! Look like you are not logged in!
+           </div>
+            ';
+        }
+
+        if($_GET['message'] == 'invalid'){
+            echo '
+           <div class = "error">
+           Unknown username and password
+           </div>
+            ';
+        }
+
+        if($_GET['message'] == 'logout'){
+            echo '
+           <div class = "success">
+           You have been logged out!
+           </div>
+            ';
+        }
+
+     }
+        
+     
+     ?>
         <form action = "index.php" method="POST" class="login-form">
             <div class="form-control">
-                <input type="text" name="username" id="username" placeholder="Username">
+                <input type="text" name="username" id="username" placeholder="Username"
+                >
                 <i class="fas fa-user"></i>
             </div>
             <div class="form-control">

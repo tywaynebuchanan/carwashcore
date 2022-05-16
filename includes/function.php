@@ -194,10 +194,11 @@ public function currentJob(){
 public function completeJob(){
     global $conn;
     $total = 0;
+    $date = date('Y-m-d');
     $sql = $conn->prepare("SELECT * FROM tbl_orders 
     INNER JOIN status ON 
     tbl_orders.status = status.status_id
-    WHERE status.status_id = 1");
+    WHERE status.status_id = 1 AND DATE_FORMAT(timelogged,'%Y-%m-%d') <= '$date'");
     $sql->execute();
     $result = $sql->get_result();
         while($row = $result->fetch_assoc()){

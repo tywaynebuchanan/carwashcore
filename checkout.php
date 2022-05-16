@@ -4,11 +4,15 @@ include('lib/config.php');
 include('includes/function.php');
 include('includes/customfunctions.php');
 include('includes/showCars.class.php');
-isLoggedin();
+
+
+
 $stmt = new displayDashboard();
 $service = new displayDashboard();
 $totals = new displayDashboard();
 $car = new showCars($conn);
+
+isLoggedin();
 
 $grand_total = 0;
 $allitems = '';

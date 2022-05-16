@@ -12,7 +12,24 @@ include('includes/totalfunctions.php');
             This is breakdown of the services offered for <?php echo date('Y-m-d')?>
     </p>
 
+    
+    
+
     <div class="container">
+        <h1 class="title">
+            Filter Report by Date
+        </h1>
+        <p class="subtitle">
+            Select a date from the date picker.
+    </p>
+    <div class="field has-addons is-expanded">
+                 <div class="control">
+                    <input class="input" type="date" name="date">
+                 </div>
+                <div class="control">
+                <a class="button is-link" href="completecars.php?filter=date">Search</a>
+                </div>
+            </div>
     <table class="table is-fullwidth is-bordered has-text-centered">
         <thead>
             <tr>
@@ -41,6 +58,7 @@ include('includes/totalfunctions.php');
             </tr>
         </tbody>
     </table>
+    <a href ="" class="button is-warning"><i class = "fas fa-print"></i>Print Report</a>
     </div>
 </section>
 

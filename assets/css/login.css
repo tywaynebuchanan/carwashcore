@@ -114,6 +114,12 @@ input:focus ~ i{
     cursor: pointer;
 }
 
+.error{
+    color: red;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
 @media (max-width: 768px) {
     
     body{

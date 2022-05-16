@@ -1,6 +1,5 @@
 <?php $totals = new displayDashboard();
 
-
 ?>
 
 <!--Navbar-->

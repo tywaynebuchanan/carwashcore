@@ -3,10 +3,14 @@ session_start();
 include('lib/config.php');
 include('includes/function.php');
 include('includes/customfunctions.php');
+include("templates/header.html.php");
+
+
 $stmt = new displayDashboard();
 $service = new displayDashboard();
 $totals = new displayDashboard();
-include("templates/header.html.php");
+
+
 templateheader("Car Wash Management &mdash; Dashboard");
 isLoggedin();
 ?>

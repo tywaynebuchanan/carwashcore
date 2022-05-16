@@ -8,7 +8,7 @@ function showAll(){
     $stmt = $conn->prepare("SELECT * from tbl_orders 
     INNER JOIN discount ON tbl_orders.discount_id = discount.discount_id 
     INNER JOIN status ON tbl_orders.status_id = status.status_id 
-    WHERE DATE_FORMAT(timelogged,'%Y-%m-%d') <= '$date' AND status.status_id = 1");
+    WHERE DATE_FORMAT(timelogged,'%Y-%m-%d') = '$date' AND status.status_id = 1");
     $stmt->execute();
     $result = $stmt->get_result();
     echo "

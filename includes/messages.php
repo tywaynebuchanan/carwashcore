@@ -26,6 +26,14 @@ function message(){
             </div>
             ';
         }
+
+        if($_GET['message'] == 'empty'){
+            echo '
+            <div class="notification is-danger" id ="message">
+            You need to input your username and password!
+            </div>
+            ';
+        }
     }
 
 }
